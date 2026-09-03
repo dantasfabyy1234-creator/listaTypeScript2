@@ -1,27 +1,19 @@
-// 3. Crie um programa que solicite dois números e simule um menu de uma calculadora:
-// 1 - Soma
-// 2 - Subtração
-// 3 - Multiplicação
-// 4 - Divisão
-export function runQuestao2Condicional() {
-    let soma = 0, subtracao = 0, multiplicacao = 0, divisao = 0;
-    let nub1 = Number(prompt("Informe seu primeiro número: "));
-    let nub2 = Number(prompt("Informe seu segundo número: "));
-    let op = Number(prompt(`1 - Soma\n2 - Subtração\n3 - Multiplicação\n4 - Divisão`));
-    if (op === 1) {
-        soma = nub1 + nub2;
-        console.log("Sua soma é" + soma);
-    }
-    else if (op === 2) {
-        subtracao = nub1 - nub2;
-        console.log("Sua subtração é " + subtracao);
-    }
-    else if (op === 3) {
-        multiplicacao = nub1 * nub2;
-        console.log("Sua multiplicação é " + multiplicacao);
-    }
-    else if (op === 4) {
-        divisao = nub1 / nub2;
-        console.log("Sua divisão é " + divisao);
-    }
-}
+
+// 2. Crie um programa chamado Estações. Este programa deve ler uma data e armazenar na
+// variável mês, um número entre 1 e 12, correspondendo a um dos meses do ano. No final,
+// você deve imprimir uma mensagem conforme o exemplo: A estação do ano correspondente
+// ao mês 3 é Verão Considere a estação prevalente para cada mês:
+// a) Janeiro (1): Verão
+// b) Fevereiro (2): Verão
+// c) Março (3): Verão
+// d) Abril (4): Outono
+// e) Maio (5): Outono
+// f) Junho (6): Outono
+// g) Julho (7): Inverno
+// h) Agosto (8): Inverno
+// i) Setembro (9): Inverno
+// j) Outubro (10): Primavera
+// k) Novembro (11): Primavera
+// l) Dezembro (12): Primavera
+
+
