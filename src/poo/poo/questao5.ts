@@ -18,7 +18,7 @@ class Pessoa {
     }
 
     envelhecer(idade:number){
-         let idadeAtual = this.idade + 1
+         let idadeAtual = idade + 1
          return idadeAtual
     }
     engordar(){
@@ -27,11 +27,13 @@ class Pessoa {
     emagrecer(){
 
     }
-    crescer(altura:number, idade: number){
+    crescer(altura:number, idade: number):number{
+        let alturaAtual = 0
         if(idade < 21){
-            let alturaAtual = this.altura + 0.5
-            return alturaAtual
+            alturaAtual = altura + 0.5
         }
+        return alturaAtual
+
     }
 }
 let nome:string = String(prompt("Informe seu nome: "))

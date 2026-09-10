@@ -1,20 +1,13 @@
 {
-  "name": "listatypescript2",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/riquelmefreitas193-blip/ListaTypeScript.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/riquelmefreitas193-blip/ListaTypeScript/issues"
-  },
-  "homepage": "https://github.com/riquelmefreitas193-blip/ListaTypeScript#readme"
+"name": "teste-type",
+"version": "1.0.0",
+"main": "index.js",
+"scripts": {
+"test": "echo \"Error: no test specified\" && exit 1",
+"start": "tsc && node ./dist/index.js"
+},
+"keywords": [],
+"author": "",
+"license": "ISC",
+"type ": "module"
 }

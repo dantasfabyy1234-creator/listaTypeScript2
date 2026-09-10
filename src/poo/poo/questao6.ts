@@ -23,23 +23,68 @@ class Conta {
         this.saldo = this.saldo + valorDep
 
     }
-    saque(valorSaq: number){
-        this.saldo = this.saldo - valorSaq
+    saque(valorSaq: number): number{
+        
+        if(valorSaq > this.saldo){
+            alert("SALDO INSUFICIENTE!")
+        }
+        else{
+            this.saldo = this.saldo - valorSaq
+        }
+        return this.saldo
     }
 }
 
 let numeroDaConta:number = Number(prompt("informe o número da sua conta correte: "))
 let nomeCliente:string = String(prompt("Informe o seu nome: "))
 
+let conta = new Conta(numeroDaConta, nomeCliente)
 
-alert(`Escolha um opção: 
-    1 - Alterar nome
-    2 - Fazer Depósito
-    3 - Fazer Saque `)
+let opcao = 0
+while(opcao != 4){
+    alert(`Escolha um opção: 
+        1 - Alterar nome
+        2 - Fazer Depósito
+        3 - Fazer Saque 
+        4 - sair`)
 
-let opcao: number = Number(prompt())
-    
-if(op == 1){
-    
+    opcao = Number(prompt())
 
+    let novoNome:string, valorDeposito:number, valorSaque:number
+
+    if(opcao == 1){
+        novoNome = String(prompt("Informe o nome atual que deseja:"))
+
+        conta.alterarNome(novoNome)
+
+        alert(`Nome alterado com sucesso!
+            Novo nome: ${conta.nome}`)
+    }
+    else if(opcao == 2){
+        valorDeposito = Number(prompt("Informe o valor que deseja depositar na conta: "))
+
+        conta.deposito(valorDeposito)
+
+        alert(`Depósito realizado com sucesso!
+            Saldo atual: ${conta.saldo}`)
+    }
+    else if(opcao == 3){
+        valorSaque = Number(prompt("Informe o valor do saque: "))
+
+        let result = conta.saque(valorSaque)
+
+        if(result > 0){
+            alert(`Saque realizado com sucesso!
+            Saldo atual: ${conta.saldo}`)
+        }
+        
+
+    }
+    else if(opcao == 4 ){
+        alert("saindo...")
+        break
+    }
+    else{
+        alert("OPÇÃO INVÁLIDA!")
+    }
 }
