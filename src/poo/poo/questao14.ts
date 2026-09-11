@@ -46,16 +46,36 @@ class Livro {
         alert(`Dados do livro:
             -------
             livro: ${this._titulo} 
-            Autor: ${this._autor} }`)
+            Autor: ${this._autor} 
+            Ano: ${this._anoPublicacao}
+            Disponibilidade: ${this._disponibilidade}`)
     }
 }
 
 let listarLivro:Livro[]=[]
-let novoLivro:Livro
 let quantidade:number = 0
+let titulo:string, autor:string, ano:number, disponibilidade:string
+let disp:boolean
+let novoLivro:Livro  
 
-quantidade = Number(prompt("Informe quantos exemplantes será cadastrado: "))
+quantidade = Number(prompt("Informe quantos livros será cadastrado: "))
 
-for(let i=0; i<quantidade; i++){
+for(let i=0; i<= quantidade; i++){
+    titulo = String(prompt("Informe o título do livro: "))
+    autor = String(prompt("Informe o nome do autor: "))
+    ano = Number(prompt("Informe o ano: "))
+    disponibilidade = String(prompt("Informe se o livro está disponível S-sim || N-não ")).toUpperCase()
+
+    if(disponibilidade == "S"){
+        disp = true
+    }
+    else{
+        disp = false
+    }
+    novoLivro = new Livro(titulo, autor, ano, disp) 
+    listarLivro.push(novoLivro)
+}
+for(let i=0; i<=listarLivro.length; i++){
+    listarLivro[i].listarLivros()
 }
 

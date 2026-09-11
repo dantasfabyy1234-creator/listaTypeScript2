@@ -16,7 +16,7 @@ class Pedido{
 
     public get nomeCliente(): string {
         return this._nomeCliente
-        
+
     }
     public set nomeCliente(value: string) {
         this._nomeCliente = value
@@ -49,4 +49,4 @@ let valor:number = Number(prompt("Informe o valor do pedido: "))
 
 let cliente = new Pedido(nomeCliente, nomePedido, valor)
 
-cliente.exibirResumo // nao esta exibindo
+cliente.exibirResumo() 
