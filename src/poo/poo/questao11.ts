@@ -16,6 +16,7 @@ class Pedido{
 
     public get nomeCliente(): string {
         return this._nomeCliente
+        
     }
     public set nomeCliente(value: string) {
         this._nomeCliente = value
