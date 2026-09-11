@@ -48,4 +48,4 @@ let valor:number = Number(prompt("Informe o valor do pedido: "))
 
 let cliente = new Pedido(nomeCliente, nomePedido, valor)
 
-cliente.exibirResumo
+cliente.exibirResumo // nao esta exibindo
