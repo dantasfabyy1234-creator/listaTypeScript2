@@ -3,7 +3,8 @@
 // Mamíferos têm tipo de alimentação; aves têm se são migratórias ou não. Cada animal tem um
 // comportamento de ‘emitir som’ e ‘mover’ diferente. 
 // 
-//O sistema deve cadastrar animais, listar por tipo (Mamíferos ou Aves) e simular a &#39;hora da alimentação&#39; chamando o método de som de cada um.
+//O sistema deve cadastrar animais, listar por tipo (Mamíferos ou Aves) e simular a hora da alimentação&#39; chamando o método de 
+//som de cada um.
 
 abstract class Zoologico {
     private _nome: string
@@ -94,3 +95,37 @@ class Aves extends Zoologico {
         alert(`${this.nome} está voando`)
     }
 }
+ let listaMamiferos:Mamiferos[] = []
+ let nomeMamifero:string, especieMamifero:string, idadeMamifero:number, sexoMamifero:string, tipoDeAlimentacaoMamifero:string
+
+ let listaAves:Aves[] = []
+ let nomeAves:string, especieAves:string, idadeAves:number, sexoAves:string, seSaoMigratorias:string
+    
+ let continuar:string = "S"
+ while(continuar == "S"){
+    alert("CADASTRANDO ANIMAL MAMÍFERO...")
+    nomeMamifero = String(prompt("Informe o nome do animal: "))
+    especieMamifero = String(prompt("Informe a espécie: "))
+    idadeMamifero = Number(prompt("Digite a idade do animal: "))
+    sexoMamifero = String(prompt("Informe o sexo do animal, sendo: F-fêmea | M-macho")).toUpperCase()
+    tipoDeAlimentacaoMamifero = String(prompt("Informe o tipo de alimentação do seu mamífero: "))
+
+    let mamiferos = new Mamiferos (nomeMamifero, especieMamifero, idadeMamifero, sexoMamifero, tipoDeAlimentacaoMamifero)
+
+    listaMamiferos.push(mamiferos)
+
+    alert("CADASTRANDO AVE...")
+    nomeAves = String(prompt("Informe o nome do animal: "))
+    especieAves = String(prompt("Informe a espécie: "))
+    idadeAves = Number(prompt("Digite a idade do animal: "))
+    sexoAves = String(prompt("Informe o sexo do animal, sendo: F-fêmea | M-macho")).toUpperCase()
+    seSaoMigratorias = String(prompt("O animal é migrátorio?, digite: S-sim | N-não")).toUpperCase()
+
+    let aves = new Aves (nomeAves, especieAves, idadeAves, sexoAves, seSaoMigratorias)
+
+    listaAves.push(aves)
+
+    continuar = String(prompt("Deseja cadastrar mais animais? S-sim | N-não")).toUpperCase()
+
+ } 
+            

@@ -12,6 +12,7 @@ class Bola {
         this.circuferencia = circ;
         this.material = m;
     }
+    
 
     trocarCor(novaCor:string){
         this.cor = novaCor
