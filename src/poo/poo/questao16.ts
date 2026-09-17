@@ -127,5 +127,7 @@ class Aves extends Zoologico {
 
     continuar = String(prompt("Deseja cadastrar mais animais? S-sim | N-não")).toUpperCase()
 
- } 
+}
+
+
             
