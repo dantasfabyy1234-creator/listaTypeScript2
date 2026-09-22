@@ -65,13 +65,22 @@ class Mamiferos extends Zoologico {
     }
 
     // POLIMORFISMO
-    emitirsom(): void {
+    public emitirsom(): void {
         alert(`${this.nome} está emitindo um som de mamífero.`)
     }
 
-    mover(): void {
+    public mover(): void {
         alert(`${this.nome} está andando.`)
     }
+    ExibirMamiferos():void {
+        alert(`Informações do Mamífero:
+            -------
+            Nome: ${this.nome} 
+            Especíe: ${this.especie} 
+            Idade: ${this.idade}
+            Sexo: ${this.sexo}
+            Tipo de Alimentação: ${this.tipoDeAlimentacao}`)
+        }
 }
 class Aves extends Zoologico {
     private _SeSaoMigratorias: string
@@ -94,15 +103,37 @@ class Aves extends Zoologico {
     mover(): void {
         alert(`${this.nome} está voando`)
     }
+    ExibirAves():void {
+        alert(`Infotmações da Ave:
+            -------
+            Nome: ${this.nome} 
+            Especíe: ${this.especie} 
+            Idade: ${this.idade}
+            Sexo: ${this.sexo}
+            Se são migartórias: ${this.SeSaoMigratorias}`)
+    }
 }
  let listaMamiferos:Mamiferos[] = []
  let nomeMamifero:string, especieMamifero:string, idadeMamifero:number, sexoMamifero:string, tipoDeAlimentacaoMamifero:string
 
  let listaAves:Aves[] = []
  let nomeAves:string, especieAves:string, idadeAves:number, sexoAves:string, seSaoMigratorias:string
-    
- let continuar:string = "S"
- while(continuar == "S"){
+
+ let animal:Mamiferos
+
+
+
+let opcao = 0
+
+while(opcao != 3){
+    alert(`Escolha um opção: 
+        1 - Cadastrar mamífero
+        2 - Cadastrar aves
+        3 - sair `)
+
+    opcao = Number(prompt())
+
+    if(opcao == 1){
     alert("CADASTRANDO ANIMAL MAMÍFERO...")
     nomeMamifero = String(prompt("Informe o nome do animal: "))
     especieMamifero = String(prompt("Informe a espécie: "))
@@ -113,7 +144,8 @@ class Aves extends Zoologico {
     let mamiferos = new Mamiferos (nomeMamifero, especieMamifero, idadeMamifero, sexoMamifero, tipoDeAlimentacaoMamifero)
 
     listaMamiferos.push(mamiferos)
-
+    }
+    else if(opcao == 2 ){
     alert("CADASTRANDO AVE...")
     nomeAves = String(prompt("Informe o nome do animal: "))
     especieAves = String(prompt("Informe a espécie: "))
@@ -124,10 +156,19 @@ class Aves extends Zoologico {
     let aves = new Aves (nomeAves, especieAves, idadeAves, sexoAves, seSaoMigratorias)
 
     listaAves.push(aves)
+    }
+    else if(opcao == 3 ){
+        alert("saindo...")
+        break
+    }
+    else{
+        alert("OPÇÃO INVÁLIDA!")
+    }
 
-    continuar = String(prompt("Deseja cadastrar mais animais? S-sim | N-não")).toUpperCase()
-
-}
-
-
-            
+ } 
+    for(let i=0; i<listaMamiferos.length; i++) {
+        listaMamiferos[i].ExibirMamiferos()
+    }    
+    for(let i=0; i<listaAves.length; i++) {
+        listaAves[i].ExibirAves()
+    }

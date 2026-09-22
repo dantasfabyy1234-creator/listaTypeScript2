@@ -90,20 +90,29 @@ while(opcao != 3){
         1 - Cadastrar Aluno
         2 - Cadastrar Servidor
         3 - Sair`)
-     }
-    opcao = Number(prompt())
 
     if(opcao == 1){
         nomeAluno = String(prompt("Informe seu nome: "))
         idAluno = Number(prompt("Digite seu código de identificação (ID): "))
-        departamento = String(prompt("Informe o seu departamento: "))
+        curso = String(prompt("Informe o seu curso "))
 
         let aluno:Aluno = new Aluno(idAluno,nomeAluno,curso)
+        ListaAlunos.push(aluno)
     }
     else if(opcao == 2){
         nomeServidor = String(prompt("Informe seu nome: "))
         idServidor = Number(prompt("Digite seu código de identificação (ID): "))
+         departamento = String(prompt("Informe o seu departamento: "))
+        let servidor:Servidor = new Servidor(idServidor,nomeServidor,departamento)
+        ListaServidor.push(servidor)
     }
+    opcao = Number(prompt())
+}
+for(let i=0; i<ListaAlunos.length; i++){
+    ListaAlunos[i].exibirUsuario()
+}
+
+
 
 // 0 - 
 // 1 - um menu perguntando se quem vou cadastrar agora vai ser aluno ou servidor
