@@ -13,10 +13,11 @@ abstract class Sensor{
     constructor(id:number){
         this.id = id
     }
+    abstract exibirRelatorio():void
 }
 class Temperatura extends Sensor {
     medidaTemp:number
-    constructor(medidaTemp:number,id:number){
+    constructor(id:number, medidaTemp:number){
         super(id)
         this.medidaTemp = medidaTemp
     }
@@ -26,6 +27,13 @@ class Temperatura extends Sensor {
             alert("Alerta! Temperatura em: " + this.medidaTemp +" ºC" )
         }
     }
+    exibirRelatorio(): void {
+        alert(`Sensor de temperatura
+            -----
+            Id: ${id}
+            Medida da temperatura: ${medidatemp}`)
+    }
+   
 }
 class Pressao extends Sensor{
     medidaATM:number
@@ -40,13 +48,24 @@ class Pressao extends Sensor{
             alert("Alerta! Pressão em: " + this.medidaATM +" atm" )
         }
     }
+    exibirRelatorio(): void {
+        alert(`Sensor de Pressão
+            -----
+            Id: ${id}
+            Medida da pessão: ${medidaAtm}`)
+    }
+
 }
 
 let listaTemp:Temperatura[] = []
-let id:number
+let id:number, medidatemp:number
 
-let temperatura: Temperatura
+let temperatura:Temperatura
 
+let listaAtm:Pressao[] = []
+let medidaAtm:number
+
+let pressao:Pressao
 
 let opcao = 0
 
@@ -59,6 +78,24 @@ while(opcao != 3){
 
     if(opcao == 1){
         id = Number(prompt("Digite o id: "))
-    }
+        medidatemp = Number(prompt("Informe a medida da temperatura: "))
 
+        temperatura = new Temperatura(id, medidatemp)
+        listaTemp.push(temperatura)
+    }
+    if(opcao == 2){
+        id = Number(prompt("Digite o id: "))
+        medidaAtm = Number(prompt("Informe a medida da temperatura: "))
+
+        pressao = new Pressao(id, medidaAtm)
+        listaAtm.push(pressao)
+    }
 }
+
+document.writeln("===SENSORES EM ALERTA!===")
+
+listaTemp.filter(temperatura => temperatura.alertaTemperatura())
+listaTemp.forEach(temperatura => temperatura.exibirRelatorio())
+
+listaAtm.filter(pressao => pressao.alertaPressao())
+listaAtm.forEach(pressao => pressao.exibirRelatorio())
