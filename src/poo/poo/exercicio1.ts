@@ -2,6 +2,7 @@
 //  Atributos: Cor, circunferência, material
 //  Métodos: trocaCor e mostraCor
 
+export function questpoo1():void{
 class Bola {
     cor: string;
     circuferencia: number;
@@ -52,4 +53,4 @@ class Bola {
             novaBola.exebirResumo()
         }
     }
-
+}

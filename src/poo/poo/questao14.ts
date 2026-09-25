@@ -3,6 +3,8 @@
 // publicação e disponibilidade (boolean). O programa deve permitir cadastrar até 15 livros via teclado,
 // listar todos os disponíveis e registrar o empréstimo de um livro pesquisado pelo título.
 
+export function questpoo14():void{
+
 class Livro {
     private _titulo: string
     private _autor: string
@@ -79,3 +81,4 @@ for(let i=0; i<=listarLivro.length; i++){
     listarLivro[i].listarLivros()
 }
 
+}

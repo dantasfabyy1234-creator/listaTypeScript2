@@ -6,6 +6,8 @@
 //O sistema deve cadastrar animais, listar por tipo (Mamíferos ou Aves) e simular a hora da alimentação&#39; chamando o método de 
 //som de cada um.
 
+export function questpoo16():void{
+
 abstract class Zoologico {
     private _nome: string
     private _especie: string
@@ -172,3 +174,4 @@ while(opcao != 3){
     for(let i=0; i<listaAves.length; i++) {
         listaAves[i].ExibirAves()
     }
+}

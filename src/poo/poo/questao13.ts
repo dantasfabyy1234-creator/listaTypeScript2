@@ -3,6 +3,8 @@
 // Cada aluno será um objeto. Crie um método que calcule a média e informe se o aluno foi aprovado
 // (média &gt;= 7) ou reprovado (caso contrário).
 
+export function questpoo13():void{
+
 class Aluno {
     private _nome: string
     private _nota1: number
@@ -60,4 +62,5 @@ while(entrada == "S"){
     aluno.calcularMedia(nota1, nota2)
     
     entrada = String(prompt("Deseja cadastrar outro aluno?, digite: S-sim e N-não "))
+}
 }

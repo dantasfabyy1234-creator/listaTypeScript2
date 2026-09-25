@@ -1,4 +1,3 @@
-"use strict";
 // 1. Crie um programa que peça números até o usuário digitar 0 e mostre:
 //  Quantidade de números digitados
 //  Soma total
@@ -10,3 +9,4 @@ while (num != 0) {
 }
 console.log("Quantidades de número digitados ", contador);
 console.log("A somas total é ", Soma);
+export {};

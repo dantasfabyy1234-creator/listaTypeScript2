@@ -4,6 +4,8 @@
 // Obs: Por padrão, a cada ano que nossa pessoa envelhece, sendo a idade dela menor que 21 anos,
 // ela deve crescer 0,5 cm.
 
+export function questpoo5():void{
+
 class Pessoa {
     nome: string;
     idade: number;
@@ -50,4 +52,4 @@ alert(`Dados Pessoais:
     Idade: ${Humano.envelhecer(idade)} 
     Peso: ${peso}
     Altura: ${Humano.crescer(altura, idade)}`)
-
+}

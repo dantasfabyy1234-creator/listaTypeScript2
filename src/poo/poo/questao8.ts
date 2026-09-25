@@ -3,6 +3,8 @@
 // ser criado um objeto que armazene essas informações. Ao final, o sistema deve exibir um resumo de
 // todos os funcionários cadastrados, utilizando um método da classe.
 
+export function questpoo8():void{
+
 class Funcionario {
     nome:string
     cargo:string
@@ -41,4 +43,5 @@ while(entrada == "S"){
 }
 for(let i=0; listaFuncioario.length; i++){
     listaFuncioario[i].exibirResumo()
+}
 }

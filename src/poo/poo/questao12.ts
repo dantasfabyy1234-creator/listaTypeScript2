@@ -4,6 +4,8 @@
 // total do aluguel e exiba o resumo da locação. Por fim, o sistema deve perguntar se deseja fazer uma
 // nova locação.
 
+export function questpoo12():void{
+
 class Locadora {
     private _modeloDoCarro: string
     private _valorDiaria: number
@@ -61,4 +63,5 @@ while(entrada == "S"){
 
     entrada = String(prompt("deseja fazer uma nova locação: digite S-sim | N-não")).toLocaleUpperCase()
 
+}
 }

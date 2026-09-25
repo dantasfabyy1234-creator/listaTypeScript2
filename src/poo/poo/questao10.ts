@@ -2,6 +2,9 @@
 // A. Atributos: Nome, Fome, Saúde e Idade
 // B. Métodos: Alterar Nome, Fome, Saúde e Idade;
 // C. Retornar Nome, Fome, Saúde e Idade
+
+export function questpoo10():void{
+
 class Bichinho {
     nome:string
     fome:number
@@ -96,7 +99,7 @@ while(opcao != 5){
         alert("OPÇÃO INVÁLIDA!")
     }
 }
-
+}
 
 
 

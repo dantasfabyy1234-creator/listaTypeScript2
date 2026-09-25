@@ -3,6 +3,8 @@
 //  Métodos: Mudar valor do Lado,
 //  Retornar valor do Lado e calcular Área;
 
+export function questpoo2():void{
+
 class Quadrado{
     tamanhoLado: number;
 
@@ -19,7 +21,7 @@ class Quadrado{
        console.log("O valor da área é: "+calculoArea)
     }
 }
-
+}
 
 
 

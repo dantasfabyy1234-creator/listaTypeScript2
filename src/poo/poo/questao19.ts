@@ -8,6 +8,8 @@
 // No final, o programa filtra a lista e exibe o relatório de todos os sensores que dispararam alertas de
 // perigo.
 
+export function questpoo19():void{
+
 abstract class Sensor{
     id:number
     constructor(id:number){
@@ -99,3 +101,4 @@ listaTemp.forEach(temperatura => temperatura.exibirRelatorio())
 
 listaAtm.filter(pressao => pressao.alertaPressao())
 listaAtm.forEach(pressao => pressao.exibirRelatorio())
+}

@@ -5,6 +5,8 @@
 //  Calcular Área,
 //  Calcular Perímetro.
 
+export function questpoo3():void{
+
 class Retangulo{
     comprimento: number;
     largura: number
@@ -28,4 +30,5 @@ class Retangulo{
         let calculoPerimetro = (this.comprimento + this.largura)*2
     }
 
+}
 }

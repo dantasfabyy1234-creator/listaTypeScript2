@@ -3,6 +3,8 @@
 // um método que calcule o valor total em estoque (preço × quantidade) e exiba essa informação para
 // cada produto.
 
+export function questpoo9():void{
+
 class Estoque {
     nomeProduto:string
     preco:number
@@ -33,3 +35,4 @@ alert(`DADOS DO PRODUTO:
         Quantidade de produtos em estoque: ${quantidadeEstoque}
         -----
         Valor total em estoque: ${produto.ValorTotalEstoque(preco, quantidadeEstoque)}`)
+}

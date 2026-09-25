@@ -2,6 +2,8 @@
 // local. Depois, deve criar um objeto com as medidas e calcular a quantidade de pisos e de rodapés
 // necessárias para o local.
 
+export function questpoo4():void{
+
 class Retangulo{
     comprimento: number;
     largura: number
@@ -30,3 +32,4 @@ alert(`Medidas do loacal:
     -------
     Quantidade de pisos necessário: ${local.calcularArea(comprimento,largura)}
     Quantidade de Rodapes necessário: ${local.calcularPerimetro}`)
+}

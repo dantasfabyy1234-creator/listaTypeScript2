@@ -4,6 +4,8 @@
 // FuncionarioHorista e FuncionarioAssalariado como subclasses. O programa deve solicitar os dados via
 // teclado e calcular o salário de cada um.
 
+export function questpoo15():void{
+
 abstract class Funcionario{
     nome:string
 
@@ -73,3 +75,4 @@ let TipoFuncionario:number = Number(prompt("Informe o tipo de Funcionario que vo
 
     funcionarioASS = new FuncionarioAssalariado(nomeFuncASS,salarioFixoFuncASS ) //criandoo objeto
 funcionarioASS.exibirSalario()
+}

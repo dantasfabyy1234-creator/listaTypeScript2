@@ -5,6 +5,8 @@
 // atributos são obrigatórios. Por fim, faça com que esse sistema interaja com o usuário permitido que
 // ele, depois de cadastrar as suas informações, possa usar os métodos disponíveis.
 
+export function questpoo6():void{
+
 class Conta {
     numero: number;
     nome: string;
@@ -87,4 +89,5 @@ while(opcao != 4){
     else{
         alert("OPÇÃO INVÁLIDA!")
     }
+}
 }

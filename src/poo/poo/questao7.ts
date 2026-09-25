@@ -2,6 +2,8 @@
 // Crie um método que receba um percentual de aumento e atualize o salário do
 // funcionário, exibindo o seu nome e novo valor.
 
+export function questpoo7():void{
+
 class Funcionario {
     nome:string
     cargo:string
@@ -33,3 +35,4 @@ alert(`Dados do cliente:
     nome: ${nomee}
     cargo: ${cargo}
     Salário atualizado: ${funcionario.percentual(aumento)}`)
+}

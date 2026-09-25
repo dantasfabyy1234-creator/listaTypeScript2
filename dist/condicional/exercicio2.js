@@ -1,4 +1,3 @@
-"use strict";
 // 2. Crie um programa chamado Estações. Este programa deve ler uma data e armazenar na
 // variável mês, um número entre 1 e 12, correspondendo a um dos meses do ano. No final,
 // você deve imprimir uma mensagem conforme o exemplo: &quot;A estação do ano correspondente
@@ -31,3 +30,4 @@ else if (mes >= 10 && mes <= 12) {
 else {
     window.alert("O número do mês tem que estar entre 1 e 12!");
 }
+export {};

@@ -10,6 +10,7 @@
 // quem almoçou no dia, mostrando mensagens personalizadas para cada tipo de usuário através de um
 // método comum de identificação, além de exibir a quantidade total de acessos de alunos e servidores.
 
+export function questpoo17():void{
 
 abstract class Usuario {
     private _id: number
@@ -111,9 +112,4 @@ while(opcao != 3){
 for(let i=0; i<ListaAlunos.length; i++){
     ListaAlunos[i].exibirUsuario()
 }
-
-
-
-// 0 - 
-// 1 - um menu perguntando se quem vou cadastrar agora vai ser aluno ou servidor
-//2-
+}

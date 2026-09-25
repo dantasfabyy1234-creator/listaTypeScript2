@@ -7,6 +7,8 @@
 // suas credenciais até que ele forneça uma senha válida que atenda a todos os requisitos de segurança
 // do sistema.
 
+export function questpoo45():void{
+
 class UsuarioSistema {
     private _login: string
     private _senha: string
@@ -33,6 +35,6 @@ class UsuarioSistema {
         if(this.senha == this.login){
             alert("Erro: o programa não permite que a senha e o login seja iguais!")
         }
-        if()
-    }
+}
+}
 }
