@@ -58,5 +58,8 @@ document.getElementById("poo19")?.addEventListener("click",questpoo19)
 import { questpoo20 } from "./poo/poo/questao20.js";
 document.getElementById("poo20")?.addEventListener("click",questpoo20)
 
+import { questpoo22 } from "./poo/poo/questao22.js";
+document.getElementById("poo22")?.addEventListener("click",questpoo22)
+
 import { questpoo42 } from "./poo/poo/questao42.js";
 document.getElementById("poo21")?.addEventListener("click",questpoo42)
