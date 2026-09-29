@@ -9,10 +9,12 @@
 // o seu tipo. No final, o sistema exibe o relatório de todas as passagens vendidas e calcula o
 // faturamento total do dia utilizando uma estrutura de redução ou soma acumulada.
 
+export function questpoo30():void{              
+
 class Passagem {
     private _nome: string
     private _cpf: number
-    private _valorBase =  0
+    private _valorBase =  50
 
     constructor(nome:string, cpf:number){
         this._nome = nome
@@ -38,7 +40,9 @@ class Passagem {
         this._valorBase = value
     }
 
-    calcularValor():number {}
+    calcularValor():number {
+         return this.valorBase
+    }
     relatorio():void{}
     
 }
@@ -64,14 +68,14 @@ class PassagemEstudantil extends Passagem{
             -------
             Nome: ${this.nome}
             CPF: ${this.cpf}
-            Valor com desconto: R$ ${this.desconto()}`)
+            Valor com desconto: R$ ${this.calcularValor()}`)
         }
 }
 
 let ListaPassagem:Passagem[]=[]
 
 let nome:string, cpf:number, valorBase = 50
-let passagemComum: Passagem
+let passagemComum: PassagemComum
 let passagemEstudantil:PassagemEstudantil
 
 let opcao = 0
@@ -104,7 +108,12 @@ for (let i = 0; i < ListaPassagem.length; i++) {
     ListaPassagem[i].relatorio()
 }
     
-    for(let i=0; ListaPassagem.length;i++  ){
-        faturamentoTotal += ListaPassagem[i].faturamentoDiario()
-    }
-    alert(`Faturamento total da noite noite: R$${faturamentoTotal}`)
+for(let i=0; i < ListaPassagem.length ;i++  ){
+    faturamentoTotal += ListaPassagem[i].calcularValor()
+}
+alert(`Faturamento total: R$${faturamentoTotal}`)
+
+
+}
+
+

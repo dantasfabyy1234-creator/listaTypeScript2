@@ -6,64 +6,199 @@
     <title>Document</title>
     <script type="module" src="dist/index.js"></script>
     <style>
-body {
-            padding: 20px;
+        * { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            justify-content: flex-start;
-    
+            min-height: 100vh;
         }
 
-        div {
+        .hidden { 
+            display: none !important; 
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        #tela-boas-vindas {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%);
             text-align: center;
-            margin-bottom: 10px;
+            transition: opacity 0.4s ease;
         }
-        
-        button {
-            margin: 10px;
-            width: 120px;
+
+        .welcome-content {
+            background: white;
+            padding: 40px;
             border-radius: 20px;
-            font-size: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            max-width: 450px;
+            width: 100%;
         }
 
-    </style>
+        .welcome-content h1 { 
+            color: #2f9e41; 
+            font-size: 2.2rem; 
+            margin-bottom: 12px; 
+        }
 
+        .welcome-content p { 
+            color: #555; 
+            margin-bottom: 30px; 
+            font-size: 1.1rem; 
+        }
+
+        #tela-principal {
+            padding: 40px 20px;
+            text-align: center;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .logo-ifs {
+            max-width: 250px;
+            margin-bottom: 20px;
+        }
+
+        #tela-principal div {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .grid-botoes {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            .grid-botoes { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        button {
+            background-color: #2f9e41;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease-in-out;
+            width: 100%; 
+        }
+
+        button:hover {
+            background-color: #237a32;
+            transform: translateY(-2px);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-entrar {
+            padding: 16px 30px;
+            font-size: 16px;
+            border-radius: 30px;
+        }
+    </style>
 </head>
 <body>
-    <img src="https://novoead.ifs.edu.br/pluginfile.php/1/theme_academi/logo/1785231210/Logo-IFS.png">
 
+   
+    <div id="tela-boas-vindas">
+        <div class="welcome-content">
+            <h1>Seja bem-vindo(a)!</h1>
+            <p>Olá,  Pronto para acessar a lista de exercícios de POO de Wendra?</p>
+            <button id="btn-entrar-dashboard" class="btn-entrar">Acessar Exercícios</button>
+        </div>
+    </div>
 
-    <div>
-        <hr>
-        <h1>2ª Unidade</h1>
-        <hr>
-        <h3>POO</h3>
-            <button id="poo1" > Questão 1 </button>
-            <button id="poo2"> Questão 2 </button>
-            <button id="poo3"> Questão 3 </button><br>
-            <button id="poo4"> Questão 4 </button>
-            <button id="poo5"> Questão 5 </button>
-            <button id="poo6"> Questão 6 </button><br>
-            <button id="poo7"> Questão 7 </button>
+    
+    <div id="tela-principal" class="hidden">
+       <img src="https://novoead.ifs.edu.br/pluginfile.php/1/theme_academi/logo/1785231210/Logo-IFS.png">
+        
+        <div>
+            <hr>
+            <h1>2ª Unidade</h1>
+            <hr>
+            <h3>Aluna: Wendra Fabian de Jesus Oliveira Santos <3 </h3>
+            <hr>
+            <h3>POO</h3>
+        </div>
+
+        <div class="grid-botoes">
+            <button id="poo1">Questão 1</button>
+            <button id="poo2">Questão 2</button>
+            <button id="poo3">Questão 3</button>
+            <button id="poo4">Questão 4</button>
+            <button id="poo5">Questão 5</button>
+            <button id="poo6">Questão 6</button>
+            <button id="poo7">Questão 7</button>
             <button id="poo8"> Questão 8 </button>
-            <button id="poo9"> Questão 9 </button><br>
-            <button id="poo10"> Questão 11 </button>
+            <button id="poo9"> Questão 9 </button>
+            <button id="poo10"> Questão 10 </button>
             <button id="poo11"> Questão 11 </button>
             <button id="poo12"> Questão 12 </button>
-            <button id="poo13"> Questão 13 </button><br>
+            <button id="poo13"> Questão 13 </button>
             <button id="poo14"> Questão 14 </button>
             <button id="poo15"> Questão 15 </button>
-            <button id="poo16"> Questão 16 </button><br>
+            <button id="poo16"> Questão 16 </button>
             <button id="poo17"> Questão 17 </button>
             <button id="poo18"> Questão 18 </button>
-            <button id="poo19"> Questão 19 </button><br>
+            <button id="poo19"> Questão 19 </button>
             <button id="poo20"> Questão 20 </button>
             <button id="poo22"> Questão 22 </button>
+            <button id="poo30"> Questão 30 </button>
+            <button id="poo33"> Questão 33 </button>
+            <button id="poo34"> Questão 34 </button>
+            <button id="poo35"> Questão 35 </button>
+            <button id="poo36"> Questão 36 </button>
+            <button id="poo37"> Questão 37</button>
+            <button id="poo38"> Questão 38 </button>
             <button id="poo42"> Questão 42 </button>
-
-
-
+            <button id="poo43"> Questão 43 </button>
+            <button id="poo44"> Questão 44 </button>
+            <button id="poo45"> Questão 45 </button>
+            <button id="poo46"> Questão 46 </button>
+            <button id="poo48"> Questão 48 </button>
+            <button id="poo49"> Questão 49 </button>
+    
+        </div>
     </div>
+
+    <script>
+        document.getElementById('btn-entrar-dashboard').addEventListener('click', function() {
+            const boasVindas = document.getElementById('tela-boas-vindas');
+            const principal = document.getElementById('tela-principal');
+            
+            boasVindas.style.opacity = '0';
+            setTimeout(() => {
+                boasVindas.classList.add('hidden');
+                principal.classList.remove('hidden');
+                principal.classList.add('fade-in');
+            }, 400);
+        });
+    </script>
+
 </body>
 </html>

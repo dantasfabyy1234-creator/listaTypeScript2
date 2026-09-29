@@ -9,8 +9,8 @@
 // Em seguida, utilize um laço para percorrer o array e exibir apenas os medicamentos que estão com
 // estoque crítico (quantidade menor que 5 unidades), mostrando o nome e a quantidade restante de cada
 // um.
-export function questpoo42():void{
 
+export function questpoo42():void{
 class Medicamento {
     private _nome: string
     private _lote: number

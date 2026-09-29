@@ -61,5 +61,48 @@ document.getElementById("poo20")?.addEventListener("click",questpoo20)
 import { questpoo22 } from "./poo/poo/questao22.js";
 document.getElementById("poo22")?.addEventListener("click",questpoo22)
 
+import { questpoo30 } from "./poo/poo/questao30.js";
+document.getElementById("poo30")?.addEventListener("click", questpoo30)
+
+import { questpoo33 } from "./poo/poo/questao33.js";
+document.getElementById("poo33")?.addEventListener("click", questpoo33)
+
+import { questpoo34 } from "./poo/poo/questao34.js";
+document.getElementById("poo34")?.addEventListener("click", questpoo34)
+
+import { questpoo35 } from "./poo/poo/questao35.js";
+document.getElementById("poo35")?.addEventListener("click", questpoo35)
+
+import { questpoo36 } from "./poo/poo/questao36.js";
+document.getElementById("poo36")?.addEventListener("click", questpoo36)
+
+import { questpoo37 } from "./poo/poo/questao37.js";
+document.getElementById("poo37")?.addEventListener("click", questpoo37)
+
+import { questpoo38 } from "./poo/poo/questao38.js";
+document.getElementById("poo38")?.addEventListener("click", questpoo38)
+
 import { questpoo42 } from "./poo/poo/questao42.js";
 document.getElementById("poo21")?.addEventListener("click",questpoo42)
+
+import { questpoo43 } from "./poo/poo/questao43.js";
+document.getElementById("poo43")?.addEventListener("click",questpoo43)
+
+import { questpoo44 } from "./poo/poo/questao44.js";
+document.getElementById("poo44")?.addEventListener("click",questpoo44)
+
+import { questpoo45 } from "./poo/poo/questao45.js";
+document.getElementById("poo45")?.addEventListener("click",questpoo45)
+
+import { questpoo46 } from "./poo/poo/questao46.js";
+document.getElementById("poo46")?.addEventListener("click",questpoo46)
+
+import { questpoo48 } from "./poo/poo/questao48.js";
+document.getElementById("poo48")?.addEventListener("click",questpoo48)
+
+import { questpoo49 } from "./poo/poo/questao49.js";
+document.getElementById("poo49")?.addEventListener("click",questpoo49)
+
+
+
+
